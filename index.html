@@ -61,7 +61,7 @@
     // -------- MPA layer (grey, transparent) --------
     let mpaLayer;
 
-    fetch('MPA3.geojson')
+    fetch('MPA.geojson')
       .then(r => r.json())
       .then(data => {
         mpaLayer = L.geoJSON(data, {
@@ -73,8 +73,9 @@
           }
         }).addTo(map);
       })
-      .catch(err => console.error('Error loading MPA3.geojson:', err));
+      .catch(err => console.error('Error loading MPA.geojson:', err));
 
   </script>
 </body>
+
 </html>
